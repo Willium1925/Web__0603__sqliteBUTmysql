@@ -31,7 +31,7 @@ app.get('/movie_quotes', function(req, res) {
 
 // post請求，quotes=?，將符合請求體的資料以json格式輸出到網頁
 app.post('/movie_quotes/ppp', function(req, res) {
-  const quote = req.body.provider;
+  const quote = req.body.提供者;
   connectionDB.query('SELECT * FROM movie_quotes WHERE provider = ?', [quote], function (error, results, fields) {
     if (error) throw error;
     res.json(results);
