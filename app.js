@@ -21,9 +21,9 @@ module.exports = app;
 
 // get請求，以json格式輸出資料庫中movie_quotes所有資料到網頁
 // 從db.js中引入mysql2模組，並建立連線
-const connection = require('./db');
+const connectionDB = require('./db');
 app.get('/movie_quotes', function(req, res) {
-  connection.query('SELECT * FROM movie_quotes', function (error, results, fields) {
+  connectionDB.query('SELECT * FROM movie_quotes', function (error, results, fields) {
     if (error) throw error;
     res.json(results);
   });

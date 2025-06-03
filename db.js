@@ -1,7 +1,7 @@
 // docker mysql
 
 const mysql = require('mysql2');
-const connection = mysql.createConnection({
+const connectionDB = mysql.createConnection({
     host: 'localhost',
     port: 3306,
     user: 'root',
@@ -9,4 +9,4 @@ const connection = mysql.createConnection({
     database: 'DB0603V3'
 });
 // 確保 db.js 最後有加上 module.exports = connection;，這樣才能正確導出 connection 物件。
-module.exports = connection;
+module.exports = connectionDB;
